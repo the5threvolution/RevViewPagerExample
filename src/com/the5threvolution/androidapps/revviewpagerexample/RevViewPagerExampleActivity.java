@@ -111,7 +111,7 @@ public class RevViewPagerExampleActivity extends FragmentActivity implements
 	// mdelolmo's solution modified slightly
 	// StackOverflow solution
 		public class SectionsPagerAdapter extends FragmentPagerAdapter {
-		    public final class CalendarPageListener implements FirstPageFragmentListener {
+		    public final class FirstPageListener implements FirstPageFragmentListener {
 		        public void onSwitchToNextFragment() {
 		            mFragmentManager.beginTransaction().remove(mFragmentAtPos0)
 		                    .commit();
@@ -124,7 +124,7 @@ public class RevViewPagerExampleActivity extends FragmentActivity implements
 		        }
 		    }
 
-		    CalendarPageListener listener = new CalendarPageListener();;
+		    FirstPageListener listener = new FirstPageListener();;
 		    private Fragment mFragmentAtPos0;
 		    private FragmentManager mFragmentManager;
 		    private int currentPosition;
